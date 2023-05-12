@@ -17,8 +17,8 @@ mongoose.connect(database.db, {
   }
 )
 
-const projectAPI = require('../backend/routes/project.route')
-const userAPI = require('../backend/routes/user.route')
+const projectAPI = require('./routes/project.route')
+const userAPI = require('./routes/user.route')
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
