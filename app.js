@@ -19,6 +19,7 @@ mongoose.connect(database.db, {
 
 const projectAPI = require('./routes/project.route')
 const userAPI = require('./routes/user.route')
+const emailAPI = require('./routes/email')
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -29,6 +30,7 @@ app.use(cors());
 // API
 app.use('/api', projectAPI)
 app.use('/api', userAPI)
+app.use('/email', emailAPI)
 
 // Create port
 const port = process.env.PORT || 4000;
