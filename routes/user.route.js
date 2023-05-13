@@ -10,7 +10,7 @@ usersRoute.route('/getuser').get((req, res) => {
        return console.log(error)
      } else {
        res.json(data)
-       console.log('good')
+       console.log('good user')
      }
    })
  })
