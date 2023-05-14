@@ -6,13 +6,13 @@ const mailRoute = express.Router();
 
 mailRoute.route('/send').post((req, res, next) => {
     const oauth2Client = new OAuth2(
-        '81472868109-d08nea5o2ksqf1iflnkramfr60pm2npn.apps.googleusercontent.com',
-        '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', 
+        '81472868109-j5137qvad1q3bibn1es10qjbfshetqdb.apps.googleusercontent.com',
+        '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', 
     );
 
     // set up OAuth2 client to get access token
     oauth2Client.setCredentials({
-        refresh_token: 'YOUR_REFRESH_TOKEN'
+        refresh_token: '1//03S2JdtiJq4hlCgYIARAAGAMSNwF-L9IrumNMzoFwOOoUFqRLROCdPDhVnyYbeWTCOFZwOPLO41CdUAZsld-nEnO5sZ49jBHQfvo'
     });
 
     // get an access token from OAuth2 client
@@ -26,16 +26,16 @@ mailRoute.route('/send').post((req, res, next) => {
                     type: 'OAuth2',
                     user: 'tasksquad13000@gmail.com',
                     accessToken: accessToken,
-                    clientId: '81472868109-d08nea5o2ksqf1iflnkramfr60pm2npn.apps.googleusercontent.com',
-                    clientSecret: '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',
-                    refreshToken: 'YOUR_REFRESH_TOKEN'
+                    clientId: '81472868109-j5137qvad1q3bibn1es10qjbfshetqdb.apps.googleusercontent.com',
+                    clientSecret: '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',
+                    refreshToken: '4/0AbUR2VNmmPwRYm5kR_s-hYKIpfuE3maouxzv-rc4kWG8SjKTZ66o103H1KBWaCK9eUdzJA'
                   }
             });
             var mailOptions = {
                 from: 'tasksquad13000@gmail.com',
                 to: req.body.email,
                 subject: req.body.subject,
-                text: req.body.text
+                text: req.body.text,
             };
             transporter.sendMail(mailOptions, function (error, info) {
 
