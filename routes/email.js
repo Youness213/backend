@@ -36,6 +36,7 @@ mailRoute.route('/send').post((req, res, next) => {
                 to: req.body.email,
                 subject: req.body.subject,
                 text: req.body.text,
+                html: req.body.html
             };
             transporter.sendMail(mailOptions, function (error, info) {
 

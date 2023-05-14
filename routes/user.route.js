@@ -10,7 +10,6 @@ usersRoute.route('/getuser').get((req, res) => {
        return console.log(error)
      } else {
        res.json(data)
-       console.log('good user')
      }
    })
  })
@@ -18,8 +17,11 @@ usersRoute.route('/getuser').get((req, res) => {
  usersRoute.route('/create-users').post((req, res) => {
     usersModel.create(req.body)
     .then((data, error) => {
-      res.send(data)
-      console.log(error)
+      if (error) {
+        return next(error)
+      } else { 
+        res.send(data)
+    }
     }
   )
   
@@ -45,7 +47,6 @@ usersRoute.route('/update-users/:id').post((req, res, next) => {
       return next(error);
     } else {
       res.json(data)
-      console.log('users successfully updated!')
     }
   })
 })

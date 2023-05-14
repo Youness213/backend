@@ -10,7 +10,6 @@ teamRoute.route('/getTeam').get((req, res) => {
         return console.log(error)
       } else {
         res.json(data)
-        console.log('good Team')
       }
     })
  })
@@ -47,7 +46,6 @@ teamRoute.route('/update-Team/:id').post((req, res, next) => {
       return next(error);
     } else {
       res.json(data)
-      console.log('Team successfully updated!')
     }
   })
 })
@@ -61,7 +59,6 @@ teamRoute.route('/delete-Team/:id').delete((req, res, next) => {
       res.status(200).json({
         msg: data
       })
-      console.log('done')
     }
   })
 })

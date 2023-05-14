@@ -45,7 +45,6 @@ projectRoute.route('/update-project/:id').post((req, res, next) => {
       return next(error);
     } else {
       res.json(data)
-      console.log('project successfully updated!')
     }
   })
 })
@@ -59,7 +58,6 @@ projectRoute.route('/delete-project/:id').delete((req, res, next) => {
       res.status(200).json({
         msg: data
       })
-      console.log('done')
     }
   })
 })
