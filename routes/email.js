@@ -32,7 +32,7 @@ mailRoute.route('/send').post((req, res, next) => {
                   }
             });
             var mailOptions = {
-                from: 'tasksquad13000@gmail.com',
+                from: '"TaskSquad" <tasksquad13000@gmail.com>',
                 to: req.body.email,
                 subject: req.body.subject,
                 text: req.body.text,
