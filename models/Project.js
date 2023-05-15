@@ -11,7 +11,10 @@ let projectSchema = new Schema({
     content: {
         type: String
     }, 
-    due: {
+    startdue: {
+        type: Date
+    }, 
+    enddue: {
         type: Date
     },
     status: {
@@ -19,6 +22,9 @@ let projectSchema = new Schema({
     },
     priority: {
         type: Number
+    },
+    visibility: {
+        type: String
     },
 }, {
     collection: 'projects'
