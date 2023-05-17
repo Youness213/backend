@@ -26,6 +26,9 @@ let projectSchema = new Schema({
     visibility: {
         type: String
     },
+    creator: {
+        type: String
+    },
 }, {
     collection: 'projects'
 })
