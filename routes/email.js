@@ -12,7 +12,7 @@ mailRoute.route('/send').post((req, res, next) => {
 
     // set up OAuth2 client to get access token
     oauth2Client.setCredentials({
-        refresh_token: '1//03S2JdtiJq4hlCgYIARAAGAMSNwF-L9IrumNMzoFwOOoUFqRLROCdPDhVnyYbeWTCOFZwOPLO41CdUAZsld-nEnO5sZ49jBHQfvo'
+        refresh_token: '1//03dBBpaoQGejFCgYIARAAGAMSNwF-L9Ir7kDlyLldhPNBIKuokkP19wGkb9pFXUy2kPoIi0ozOrDVGuomXUw6bY-uzUXQUYHO8vI'
     });
 
     // get an access token from OAuth2 client

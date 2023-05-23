@@ -21,12 +21,15 @@ let projectSchema = new Schema({
         type: String
     },
     priority: {
-        type: Number
+        type: String
     },
     visibility: {
         type: String
     },
     creator: {
+        type: String
+    },
+    AchivedBy: {
         type: String
     },
 }, {
